@@ -9,12 +9,12 @@ import sys
 #this will save the Injuries.csv file to the CleanedDiseases path as CleanedInjures.csv
 def cleaningDataset(directoryIn, directoryOutput):
     #read in the file
-    df = pd.read_csv(str(directoryIn));
+    df = pd.read_csv(str(directoryIn))
 
     #changes the columns to only look at the ones that have 0-4 years for those specifc years
     for col in df:
         if (col == '2015.2' or col == '2010.2' or  col == '2005.2' or col == '2000.2' or col == 'Unnamed: 0'):
-            continue;
+            continue
         else:
             df = df.drop([str(col)], axis = 1)
     
@@ -53,10 +53,7 @@ def cleaningDataset(directoryIn, directoryOutput):
     df.to_csv(directoryOutput, index = False)
     
         
-    
-    
-
-
+#call the function        
 cleaningDataset(sys.argv[1], sys.argv[2])
 
 
