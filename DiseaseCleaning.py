@@ -48,7 +48,7 @@ def cleaningDataset(directoryIn, directoryOutput):
 
     #reset the index of the rows            
     df = df.reset_index(drop=True)
-
+    df = df[['Countries', '2000', '2005', '2010', '2015']]
     #save the dataframe as a csv to proper directory
     df.to_csv(directoryOutput, index = False)
     
