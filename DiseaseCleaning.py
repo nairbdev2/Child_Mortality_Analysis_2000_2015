@@ -25,7 +25,7 @@ def cleaningDataset(directoryIn, directoryOutput):
     countryList.sort()
 
     #rename the .2 for 0-4 years of death
-    df = df. rename(columns = {'Unnamed: 0': 'Countries', '2015.2': '2015', '2010.2': '2010', '2005.2': '2005', '2000.2': '2000'})
+    df = df.rename(columns = {'Unnamed: 0': 'Countries', '2015.2': '2015', '2010.2': '2010', '2005.2': '2005', '2000.2': '2000'})
 
     #removes the Country row that was not relevant
     index = 0
@@ -48,6 +48,9 @@ def cleaningDataset(directoryIn, directoryOutput):
 
     #reset the index of the rows            
     df = df.reset_index(drop=True)
+    
+    df.iat[24,0] = 'Russia'
+    df.iat[31,0] = 'United States'
     df = df[['Countries', '2000', '2005', '2010', '2015']]
     #save the dataframe as a csv to proper directory
     df.to_csv(directoryOutput, index = False)
