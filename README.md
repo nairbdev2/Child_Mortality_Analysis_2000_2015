@@ -1,4 +1,4 @@
-# CS-418-Project
+# Child Mortality Analysis
 ## Note
 CS418 Data Science Final Project
 
