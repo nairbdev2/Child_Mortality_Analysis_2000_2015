@@ -1,6 +1,6 @@
 # Child Mortality Analysis
 ## Note
-CS418 Data Science Final Project. Full Analysis located in the Full Report.
+CS418 Data Science Final Project. Full Analysis located in the Final Project Report.
 
 ## Pre-Requisites
 * Jupyter Notebook
